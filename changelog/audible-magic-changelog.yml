@@ -1,0 +1,20 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/toolkit-v61-release-notes
+scheme: Toolkit version numbering (e.g., v61.5)
+current_version: v61.5
+entries:
+  - version: v61.5
+    date: Not specified
+    breaking: false
+    highlights:
+      - Added support for Audible Magic's Version ID capabilities
+      - Added error diagnostics output for troubleshooting
+      - Improved timeout configuration
+      - Improved HTTP 429 retry timing
+      - Improved command-line help text
+      - Improved log messages
+      - Removed dependency for ffprobe binary
+      - Removed support for non-GPU transcribe functionality
+      - Removed support for Intel-based macOS chipsets
+note: Release notes are available for Toolkit versions but lack specific dates.

@@ -1,23 +1,140 @@
 aid: audible-magic
+
 name: Audible Magic
-description: 'Audible Magic is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Audible Magic is an automatic content recognition (ACR) and rights administration company whose content identification
+  technology is used by platforms such as Twitch, SoundCloud and Dailymotion. Its products include identification services
+  (ID360, Social Check, Article 17 compliance), rights management and licensing (Rights360, RightsRX, Admin360) and music
+  fulfillment (Fulfillment360, the Fulfillment Content API and Cleared Catalog data feed), with an Audible Magic Toolkit and
+  help-desk documentation for implementing its services.
+
 url: https://raw.githubusercontent.com/api-evangelist/audible-magic/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:kin-score-markets
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Automatic Content Recognition
+- Content Identification
+- Rights Management
+- Music Licensing
+- Copyright Compliance
+- Audio Fingerprinting
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.audiblemagic.com/wp-content/uploads/2019/08/AM-Logo.png
+
 common:
+- type: RateLimits
+  url: rate-limits/audible-magic-rate-limits.yml
+- type: CLI
+  url: cli/audible-magic-cli.yml
+- type: Conventions
+  url: conventions/audible-magic-conventions.yml
+- type: Authentication
+  url: authentication/audible-magic-authentication.yml
+- type: Lifecycle
+  url: lifecycle/audible-magic-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/audible-magic-problem-types.yml
+- type: Hosts
+  url: hosts/audible-magic-hosts.yml
+- type: IntegrationEdges
+  url: integrations/audible-magic-integration-edges.yml
+- type: Vendors
+  url: vendors/audible-magic-vendors.yml
+- type: DomainSecurity
+  url: security/audible-magic-domain-security.yml
 - type: Website
-  url: https://audiblemagic.com
+  url: https://www.audiblemagic.com/
+- type: Documentation
+  url: https://support.audiblemagic.com/implementing-audible-magic-services
+- type: GettingStarted
+  url: https://support.audiblemagic.com/onboarding-overview-id-services
+- type: Support
+  url: https://support.audiblemagic.com/
+- type: Login
+  url: https://support.audiblemagic.com/_hcms/mem/login
+- type: Blog
+  url: https://www.audiblemagic.com/newsroom/news/
+- type: Newsroom
+  url: https://www.audiblemagic.com/newsroom/
+- type: Leadership
+  url: https://www.audiblemagic.com/company/leadership/
+- type: Contact
+  url: https://www.audiblemagic.com/contact/
+- type: PrivacyPolicy
+  url: https://www.audiblemagic.com/privacy-policy/
+- type: LicenseAgreement
+  url: https://www.audiblemagic.com/software-license-agreement/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/audible-magic
+
+apis:
+- aid: audible-magic:fulfillment-content-api
+  name: Audible Magic Fulfillment Content API
+  description: The Audible Magic Content API is a lightweight method to obtain media files from Audible Magic's Fulfillment
+    services - an HTTP GET (with a cookie) taking a RetailerID, a ComponentID and an AssetType (bitrate/encoding) that returns
+    the media file. Audible Magic's help desk also states its Fulfillment APIs are SOAP-based requests to the Audible Magic
+    Service. Access requires explicit authorization and catalog configuration per retailer ID; no base URL, WSDL or OpenAPI
+    is published.
+  humanURL: https://support.audiblemagic.com/how-does-the-audible-magic-fulfillment-api-work
+  tags:
+  - Music Fulfillment
+  - Media Delivery
+  properties:
+  - type: Documentation
+    url: https://support.audiblemagic.com/how-does-the-audible-magic-fulfillment-api-work
+  - type: Support
+    url: https://support.audiblemagic.com/fulfillment-api-troubleshooting-required-info
+- aid: audible-magic:identification-toolkit
+  name: Audible Magic Identification Toolkit
+  description: The Audible Magic Toolkit is a package of command-line programs (identify, analyze, identifyStream) for Linux,
+    Windows and Mac that fingerprint unknown media files, package the fingerprints into an ID request posted to the Audible
+    Magic backend, and return the identification response as JSON, driven by a Toolkit configuration file issued to customers.
+  humanURL: https://support.audiblemagic.com/audible-magic-toolkit
+  tags:
+  - Content Identification
+  - Audio Fingerprinting
+  properties:
+  - type: Documentation
+    url: https://support.audiblemagic.com/audible-magic-toolkit
+  - type: ReleaseNotes
+    url: https://support.audiblemagic.com/toolkit-v61-release-notes
+  - type: Errors
+    url: https://support.audiblemagic.com/toolkit-errors
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website audiblemagic.com redirects to www.audiblemagic.com (title names Audible Magic); pointers read from homepage
+    and support.audiblemagic.com KB. No GitHub org (github.com/audiblemagic 404), no public pricing/ToS page found.
+  evidence:
+  - url: https://audiblemagic.com
+    status: 200
+  - url: https://support.audiblemagic.com/implementing-audible-magic-services
+    status: 200
+  - url: https://github.com/audiblemagic
+    status: 404
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 20
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

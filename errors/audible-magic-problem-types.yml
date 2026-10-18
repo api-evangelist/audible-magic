@@ -1,0 +1,44 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/toolkit-errors
+format: JSON
+envelope:
+  statusCode: statusCode
+  title: statusDescription
+problems:
+  - status: 3
+    title: Incorrect command line
+    description: Typing error, missing argument, or unexpected word.
+    remediation: Re-run the command manually to see the error messages.
+  - status: 6
+    title: File input or output error
+    description: Permission issues with input/output files.
+    remediation: Check file permissions.
+  - status: 10
+    title: No sound data in file
+    description: Video file with no audio when only audio fingerprints are configured.
+    remediation: Skip files or sign up for video ID service.
+  - status: 42
+    title: No video available
+    description: Audio file when only video fingerprints are configured.
+    remediation: Skip files or sign up for audio ID service.
+  - status: 48
+    title: Didn't find FFMPEG command-line program
+    description: Incorrect installation.
+    remediation: Check ffmpeg executable exists.
+  - status: 49
+    title: File not found
+    description: Input file does not exist.
+    remediation: Ensure files exist.
+  - status: 71
+    title: Not a media file
+    description: Invalid media file.
+    remediation: Skip file.
+  - status: 2045
+    title: ID server response timeout
+    description: AM took too long to respond.
+    remediation: Retry transaction.
+  - status: 5429
+    title: HTTP status code 429
+    description: Too many requests.
+    remediation: See Retries and Timeouts.

@@ -1,0 +1,4 @@
+generated: '2026-10-18'
+method: none
+note: Audible Magic provides command-line Toolkit binaries (identify, analyze, identifyStream) for Linux, Windows, and Mac, but these are distributed directly to customers rather than through public package registries. No public SDK packages were found in npm, PyPI, RubyGems, crates.io, or other package registries.
+packages: []

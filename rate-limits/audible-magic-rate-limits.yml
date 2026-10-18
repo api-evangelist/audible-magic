@@ -1,0 +1,14 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/toolkit-errors
+name: Audible Magic rate limits
+limit_count: 1
+limits:
+  - name: Request rate limiting
+    limit_text: Too many requests.
+    kind: rate
+    scope: per-key
+    response_headers:
+      - Retry-After
+    status_code: 429
+note: Rate limiting is mentioned in error documentation (HTTP 429) but specific limits are not published.

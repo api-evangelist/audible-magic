@@ -1,0 +1,19 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/audible-magic-toolkit
+install: Direct distribution of binaries to customers
+commands:
+  - name: identify
+    description: Takes an input media file, packages it into an ID request, posts to Audible Magic, returns JSON output
+    usage: .\identify -c configFile -i inputFile -e assetID
+  - name: analyze
+    description: Separates fingerprint generation from posting to Audible Magic's databases
+    usage: .\analyze -c configFile -i inputMediaFile -o outputFile -e assetID
+  - name: identifyStream
+    description: Accepts real-time stream URL, returns JSON output and log files with match information
+    usage: .\identifyStream -c configFile -i streamURL -e streamID -O outputDirectory
+key_flows:
+  - Media file identification via identify command
+  - Batch fingerprint generation via analyze command
+  - Real-time stream identification via identifyStream command
+note: Audible Magic Toolkit is a package of command-line programs for Linux, Windows, and Mac.

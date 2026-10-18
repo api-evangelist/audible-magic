@@ -1,0 +1,85 @@
+generated: '2026-10-18'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - other
+  - website
+hosts:
+- host: api.audiblemagic.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: audiblemagic.com
+  role: api
+  relation: own
+- host: audiblemagic.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: audiblemagic.com
+  role: other
+  relation: own
+- host: support.audiblemagic.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Documentation
+  - GettingStarted
+  - Support
+  - Login
+  serves:
+  - docs
+  - hosting
+  vendor: hubspot
+  registrable_domain: audiblemagic.com
+  role: docs
+  relation: own
+- host: www.audiblemagic.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Blog
+  - Newsroom
+  - Leadership
+  - Contact
+  - PrivacyPolicy
+  - LicenseAgreement
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: audiblemagic.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform

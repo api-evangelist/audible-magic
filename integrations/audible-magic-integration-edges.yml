@@ -1,0 +1,44 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://zapier.com/apps/audible-magic/integrations
+- https://n8n.io/integrations/audible-magic/
+- https://composio.dev/toolkits/audible-magic
+- https://monid.ai/tools/audible-magic
+checked:
+- https://composio.dev/toolkits/audible-magic
+- https://monid.ai/tools/audible-magic
+- https://n8n.io/integrations/audible-magic/
+- https://support.audiblemagic.com/
+- https://www.audiblemagic.com/
+- https://zapier.com/apps/audible-magic/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner: dailymotion
+  partner_name: Dailymotion
+  direction: partner-built
+  type: claimed
+  evidence: https://www.audiblemagic.com/
+  evidence_url: https://www.audiblemagic.com/
+- partner: twitch
+  partner_name: Twitch
+  direction: partner-built
+  type: claimed
+  evidence: https://www.audiblemagic.com/
+  evidence_url: https://www.audiblemagic.com/
+- partner: soundcloud
+  partner_name: SoundCloud
+  direction: partner-built
+  type: claimed
+  evidence: https://www.audiblemagic.com/
+  evidence_url: https://www.audiblemagic.com/
+- partner: facebook
+  partner_name: Facebook
+  direction: partner-built
+  type: claimed
+  evidence: https://www.audiblemagic.com/
+  evidence_url: https://www.audiblemagic.com/
+templates: []
+note: Audible Magic lists several platforms as using its technology, but no formal integration marketplace or partner
+  program documentation was found.

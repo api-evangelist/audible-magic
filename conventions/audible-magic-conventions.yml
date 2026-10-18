@@ -1,0 +1,22 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/audible-magic-toolkit
+auth_style: Configuration file based
+idempotency:
+  coverage: na
+  note: No idempotency mechanism documented for command-line Toolkit
+pagination: Not documented
+field_expansion: Not documented
+metadata: Not documented
+request_id: Not documented
+versioning: Toolkit version releases documented
+error_envelope:
+  format: JSON
+  fields:
+    - statusCode
+    - statusDescription
+rate_limit_signaling: HTTP 429 errors documented for rate limiting
+note: Conventions are minimal and focused on command-line Toolkit usage rather than REST API patterns.
+reversibility:
+  coverage: na
+  note: No write operations documented that would require reversal mechanisms

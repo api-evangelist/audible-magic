@@ -1,0 +1,4 @@
+generated: '2026-10-18'
+method: none
+note: No OAuth scopes found in documentation. Audible Magic services appear to use API keys or customer-specific configuration files rather than OAuth.
+scopes: []

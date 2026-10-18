@@ -1,0 +1,21 @@
+generated: '2026-10-18'
+method: none
+type: MCPServer
+name: Audible Magic MCP server
+status: none
+description: >-
+  Checked, nothing there. Audible Magic does not publish an MCP server (hosted or local), and no OpenAPI
+  contract exists in this repo from which to derive a candidate tool list. Its documented interfaces are the
+  SOAP-based Fulfillment API / Fulfillment Content API (HTTP GET with cookie) and the command-line Audible Magic
+  Toolkit, all gated behind customer authorization.
+checked:
+  - url: https://support.audiblemagic.com/mcp
+    status: 403
+    note: pre-flight contract_discovery graded this opaque (control path also 403) - proves nothing either way.
+  - query: '"Audible Magic" MCP server (web search, 2026-10-18)'
+    result: only unrelated servers for Audible (Amazon audiobooks), e.g. mcp.audible.com and tannerwj/audible-mcp; none from Audible Magic.
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

@@ -1,0 +1,17 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.audiblemagic.com/how-does-the-audible-magic-fulfillment-api-work
+schemes:
+  - type: apiKey
+    name: RetailerID
+    description: Assigned value to identify requests made by partner, used in Fulfillment Content API
+    in: query
+  - type: apiKey
+    name: Configuration file
+    description: Toolkit configuration file issued to customers for identification services
+    in: file
+  - type: cookie
+    name: Session cookie
+    description: HTTP GET with a cookie for Fulfillment Content API
+    in: cookie
+note: Authentication appears to be through customer-specific configuration files and retailer IDs rather than standard API keys or OAuth.

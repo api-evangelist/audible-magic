@@ -1,0 +1,48 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.audiblemagic.com/privacy-policy/
+note: >-
+  Only one legal page is published on audiblemagic.com (linked from the homepage footer): the Privacy Policy
+  (copyright footer 1999-2023, no effective date shown). No terms of service, DPA, subprocessor list, trust
+  centre, accessibility statement or transparency report was linked from the site. Signals not listed below are
+  not addressed by the page.
+signals:
+  data_subject_request:
+    url: https://www.audiblemagic.com/privacy-policy/
+    section: Changing Your Personal Information
+    note: >-
+      Customers can review and correct their own data by logging in, and can withdraw consent for holding
+      personal data not needed to administer an agreement by emailing Audible Magic. No erasure, portability or
+      access-request process is named, and the page cites no regulation (GDPR/CCPA).
+    evidence:
+    - source: https://www.audiblemagic.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: As a Customer, you may automatically review and change the information you submit to us by logging into the Site and entering the new information.
+    - source: https://www.audiblemagic.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: If you want to withdraw your consent for the holding of any personal data that is not necessary for the purpose of administering any agreement between Audible Magic and you or your company, you may notify Audible Magic at
+    - source: https://www.audiblemagic.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Audible Magic will promptly comply with your request.
+  data_residency:
+    url: https://www.audiblemagic.com/privacy-policy/
+    section: General Security
+    note: States that customer information is stored on servers in the United States. No regional choice or transfer mechanism is described.
+    evidence:
+    - source: https://www.audiblemagic.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Audible Magic stores your information on our servers located in the United States of America.
+  age_assurance:
+    url: https://www.audiblemagic.com/privacy-policy/
+    section: Minors
+    note: An eligibility rule only (under-16s may not use the Site); no age-verification mechanism is described.
+    evidence:
+    - source: https://www.audiblemagic.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: Minors (persons under the age of 16) are not eligible to use the Site.
