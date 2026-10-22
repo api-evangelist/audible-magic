@@ -7,8 +7,10 @@ source:
 - https://monid.ai/tools/audible-magic
 checked:
 - https://composio.dev/toolkits/audible-magic
+- https://ddex.net/membership/current-members/
 - https://monid.ai/tools/audible-magic
 - https://n8n.io/integrations/audible-magic/
+- https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json
 - https://support.audiblemagic.com/
 - https://www.audiblemagic.com/
 - https://zapier.com/apps/audible-magic/integrations
@@ -39,6 +41,29 @@ edges:
   type: claimed
   evidence: https://www.audiblemagic.com/
   evidence_url: https://www.audiblemagic.com/
+- partner_name: DDEX (Digital Data Exchange)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  channel: standard-directory
+  relationship: standard-participant
+  evidence: https://ddex.net/membership/current-members/
+  category: music metadata and rights messaging standard
+  contract_reference:
+    register: DDEX current members (ddex.net/membership/current-members)
+    spec_file: null
+    role: ddex-full-member
+    registered_name: Audible Magic
+    register_id: Audible Magic
+    tier: full
+    matched_domain: audiblemagic.com
+    matched_by: domain
+    identity: wikidata Q758814 'Audible Magic' P856 http://audiblemagic.com
+    detected_by: sweep-media.py
+    detected: '2026-10-19'
+  detected_by: sweep-media.py
+  first_seen: '2026-10-19'
 templates: []
 note: Audible Magic lists several platforms as using its technology, but no formal integration marketplace or partner
   program documentation was found.
